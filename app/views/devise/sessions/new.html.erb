@@ -11,17 +11,23 @@
       <%= f.input :email,
                   required: false,
                   autofocus: true,
+                  label: false,
+                  placeholder:"E-mail address",
                   input_html: { autocomplete: "email" } %>
       <%= f.input :password,
                   required: false,
+                  label: false,
+                  placeholder:"Password",
                   input_html: { autocomplete: "current-password" } %>
       <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
     </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign in" %>
+  <div id="bouton" class="form-actions" class="col-12 mb-3">
+    <%=f.button :submit, "Sign in" %>
   </div>
 <% end %>
 
+<div class="link">
 <%= render "devise/shared/links" %>
+</div>
