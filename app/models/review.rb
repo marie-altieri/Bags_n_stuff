@@ -1,4 +1,4 @@
 class Review < ApplicationRecord
-  belongs_to :bag_id
-  belongs_to :user_id
+  belongs_to :bag
+  belongs_to :user
 end
