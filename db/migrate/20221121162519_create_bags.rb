@@ -4,7 +4,7 @@ class CreateBags < ActiveRecord::Migration[7.0]
       t.string :category
       t.string :color
       t.string :brand
-      t.references :user_id, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
