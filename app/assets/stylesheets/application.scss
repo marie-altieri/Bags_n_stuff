@@ -10,3 +10,29 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.img {
+  border-radius: 20px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.title {
+  color: red;
+  background-color: aquamarine;
+  text-align: center;
+}
+
+.boxes {
+  background-color:coral;
+}
+
+.form-actions {
+  background-color: chartreuse;
+  width: 200px;
+  border-radius: 15px;
+}
