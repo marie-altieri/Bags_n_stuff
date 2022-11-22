@@ -1,8 +1,27 @@
-<ul>
-  <% @bags.each do |bag| %>
-    <li><%= bag.name %></li>
-  <% end %>
-</ul>
+<div class="container" >
+  <div class="top-container">
+    <p class="rounded-btn">Search...</p>
+  </div>
+  <div class="main-container">
+    <div class="row" >
+      <% @bags.each do |bag| %>
+        <div class="card col-6">
+          <%= link_to bag_path(bag) do %>
+            <%= image_tag "bag.jpeg", class: "img-bag" %>
+          <% end %>
+          <div class="content">
+              <h3><%= bag.brand %></h3>
+              <h4><%= bag.category %></h4>
+              <h5><%= bag.color %></h5>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
 <%# logo
 image user
 search barre
