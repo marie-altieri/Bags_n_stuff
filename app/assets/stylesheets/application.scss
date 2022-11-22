@@ -11,28 +11,52 @@
 @import "components/index";
 @import "pages/index";
 
-.img {
+body {
+  background-color: white;
+}
+
+img {
   border-radius: 20px;
   text-align: center;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: auto;
-  max-width: 100%;
+  width: 200px;
 }
 
 .title {
-  color: red;
-  background-color: aquamarine;
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .boxes {
-  background-color:coral;
+  display: block;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .form-actions {
-  background-color: chartreuse;
+  background-color: #B89498;
   width: 200px;
   border-radius: 15px;
+  text-align: center;
+}
+
+#bouton {
+  display: block;
+  margin: auto;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.link {
+  display: block;
+  margin-top: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
+  text-align: center;
+  font-size: 11px;
 }
