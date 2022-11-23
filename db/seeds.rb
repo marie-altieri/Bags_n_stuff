@@ -10,11 +10,11 @@ User.destroy_all
 
 user = User.create(email: "lolo@lolo.com", password: "123456")
 
-12.times do |i|
+12.times do
   Bag.create(
-    brand: "Bag #{i}",
-    category: ["big","small","baguette"].sample,
-    color: ["red","white","black","purple"].sample,
+    brand: ["Hermes","Chanel","Goyard", "Louis Vuitton", "Dior", "Gucci", "Jacquemus","Céline", "Chloé", "Zadig & Voltaire"].sample,
+    category: ["big","small","baguette", "hand bang", "chain bag", "saddle bag", "purse", "crossbody bag", "belt bag"].sample,
+    color: ["red", "white","black","purple", "blue", "green", "brown"].sample,
     user_id: user.id
   )
 end
