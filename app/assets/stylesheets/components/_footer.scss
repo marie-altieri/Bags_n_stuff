@@ -1,12 +1,19 @@
 #sticky-footer{
 background-color: #EAD7D6;
-border-radius: 15px;
+border-top-right-radius: 15px;
+border-top-left-radius: 15px;
+position: sticky;
+width: 100%;
+height: 55px;
+display: flex;
+align-content: center;
+align-items: center;
 
 }
 .container{
   text-align: center;
 }
-.btn{
+.buttonhome{
   background-color: #B89498;
   border-radius: 30px;
   padding-left: 2px;

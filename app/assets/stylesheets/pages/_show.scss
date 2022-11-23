@@ -1,0 +1,32 @@
+.container-bottom{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+  text-align: left;
+
+}
+.description-produit{
+  text-align: left;
+
+}
+
+.ensemble-checkbox{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+.personnalized-delivery{
+  padding-bottom: 5px;
+}
+.button-createbooking{
+  background-color: #B89498;
+  border-radius: 30px;
+}
+.button-createbooking:hover{
+  background-color: #EAD7D6;
+  color: white;
+}
