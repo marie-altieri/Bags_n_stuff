@@ -14,23 +14,19 @@ brand %>
     <%= simple_form_for [@bag, @booking] do |f| %>
       <%= f.input :start_date, as: :date, html5: true %>
       <%= f.input :end_date, as: :date, html5: true %>
+      <%= f.check_box :cancellation_guarantee, as: :boolean %>
+      <label for="cancellation-gurantee">Cancellation guarantee: +3€</label>
+      <br>
+      <%= f.check_box :damage_guarantee, label: "on sen fout" %>
+      <label for="damage-guarantee">Damage guarantee: +35€</label>
+      <br>
+      <%= f.check_box :personnalized_shipping %>
+      <label for="personnalized-delivery">Personnalized delivery: +9€</label>
+      <br>
       <%= f.button :submit %>
     <% end %>
+    <br>
 
-    <div>
-      <input type="checkbox" id="cancellation-gurantee" name="Cancellation-guarantee">
-      <label for="cancellation-gurantee">Cancellation guarantee: +3€</label>
-    </div>
-
-    <div>
-      <input type="checkbox" id="damage-guarantee" name="damage-guarantee">
-      <label for="damage-guarantee">Damage guarantee: +35€</label>
-    </div>
-
-     <div>
-      <input type="checkbox" id="personnalized-delivery" name="personnalized-delivery">
-      <label for="personnalized-delivery">Personnalized delivery: +9€</label>
-    </div>
 
     <h3>Description</h3>
     <p>Découvrez toutes les dernières nouveautés de la collection "Le Papier". Profitez de la livraison et des retours offerts. Bobs. Accessoires. Sacs. Robes.
@@ -39,4 +35,3 @@ brand %>
 
   </div>
 </div>
-
