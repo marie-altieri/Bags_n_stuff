@@ -6,5 +6,6 @@ class BagsController < ApplicationController
 
   def show
     @bag = Bag.find(params[:id])
+    @booking = Booking.new
   end
 end

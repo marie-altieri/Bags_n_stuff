@@ -11,8 +11,13 @@ brand %>
 
   <div class="container-bottom">
     <h3>Dates</h3>
-    <p>21/11/2022 > End date </p>
-     <div>
+    <%= simple_form_for [@bag, @booking] do |f| %>
+      <%= f.input :start_date, as: :date, html5: true %>
+      <%= f.input :end_date, as: :date, html5: true %>
+      <%= f.button :submit %>
+    <% end %>
+
+    <div>
       <input type="checkbox" id="cancellation-gurantee" name="Cancellation-guarantee">
       <label for="cancellation-gurantee">Cancellation guarantee: +3€</label>
     </div>
@@ -31,6 +36,6 @@ brand %>
     <p>Découvrez toutes les dernières nouveautés de la collection "Le Papier". Profitez de la livraison et des retours offerts. Bobs. Accessoires. Sacs. Robes.
        T-shirts. Mailles. Chaussures.</p>
 
-    
+
   </div>
 </div>
