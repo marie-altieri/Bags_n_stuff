@@ -3,24 +3,22 @@
     <p class="rounded-btn">Search...</p>
   </div>
   <div class="main-container">
-    <div class="row" >
+    <div class="row d-flex justify-content-between" >
       <% @bags.each do |bag| %>
-        <div class="card col-6">
+        <div class="card col-6 col-lg-3 border border-white">
           <%= link_to bag_path(bag) do %>
-            <%= image_tag "bag.jpg", class: "img-bag" %>
+            <%= image_tag "bag.jpg", style: 'height:170px%;width:170px', class: "img-bag" %>
           <% end %>
           <div class="content">
-              <h3><%= bag.brand %></h3>
-              <h4><%= bag.category %></h4>
-              <h5><%= bag.color %></h5>
+              <p class="h3"><%= bag.brand.capitalize %></p>
+              <p class="h4"><%= bag.category.capitalize %></p>
+              <p class="h3"><%= bag.color.capitalize %></p>
           </div>
         </div>
       <% end %>
     </div>
   </div>
 </div>
-
-
 
 <%# logo
 image user
