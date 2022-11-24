@@ -1,2 +1,25 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "new";
+
+#search-bar{
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  border-right: none;
+  margin-bottom: 30px;
+}
+
+#search-button{
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: #B89498;
+  border-color:#B89498 ;
+  margin-bottom: 30px;
+}
+
+
+#search-button:hover {
+background-color: #EAD7D6;
+transition: 0,5s;
+color: black;
+}
