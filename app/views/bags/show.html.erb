@@ -6,7 +6,7 @@ color
 brand %>
 <div class="container">
   <div class="container-top">
-    <%= image_tag "bag.jpg", class: "img-bag" %>
+    <%= cl_image_tag @bag.photo.key, height: 300, width: 400, crop: :fill %>
   </div>
 
   <div class="container-bottom">

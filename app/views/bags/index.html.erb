@@ -16,7 +16,7 @@
       <% @bags.each do |bag| %>
         <div class="card col-6 col-lg-3 border border-white">
           <%= link_to bag_path(bag) do %>
-            <%= image_tag "bag_pictures/#{rand(11)}.png", style: 'height:170px%;width:170px', class: "img-bag" %>
+           <%= cl_image_tag @bag.photo.key, height: 300, width: 400, crop: :fill %>
           <% end %>
           <div class="content">
               <p class="h3"><%= bag.brand.capitalize %></p>
