@@ -8,13 +8,20 @@ class BagsController < ApplicationController
     @bag = Bag.find(params[:id])
     @booking = Booking.new
   end
+  
+  def new
+    @bag = Bag.new
+  end
 
-  def index
-    if params[:query].present?
-      sql_query = "brand ILIKE :query OR category ILIKE :query"
-      @bags = Bag.where(sql_query, query: "%#{params[:query]}%")
-    else
-      @bags = Bag.all
-    end
+  def create
+    bag = Bag.new(bag_params)
+    bag.save
+    redirect_to bags_path
+  end
+
+  private
+
+  def bag_params
+    params.require(:bag).permit(:brand, :category, :color)
   end
 end
