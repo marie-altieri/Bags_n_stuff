@@ -8,6 +8,8 @@ class BookingsController < ApplicationController
   end
 
   def create
+    redirect_to new_user_session_path and return unless current_user
+
     @booking = Booking.new(booking_params)
     @bag = Bag.find(params[:bag_id])
     @booking.user = current_user
