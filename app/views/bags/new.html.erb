@@ -1,2 +1,15 @@
 
-  <h1>Add a new bag</h1>
+<h1>Add a new bag</h1>
+<%= simple_form_for(@bag) do |f| %>
+  <%= f.input :brand,
+              placeholder:"Brand",
+              label: false %>
+  <%= f.input :category,
+              placeholder:"Category",
+              label: false %>
+  <%= f.input :color,
+              placeholder:"Price",
+              label: false %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit %>
+<% end %>
