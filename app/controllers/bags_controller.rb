@@ -1,5 +1,4 @@
 class BagsController < ApplicationController
-
   def index
     @bags = Bag.all
     if params[:query].present?
