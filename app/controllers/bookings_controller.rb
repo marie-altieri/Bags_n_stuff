@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.bag = @bag
     if @booking.save
-      redirect_to bag_bookings_path(@bag)
+      redirect_to bookings_path
     else
       render "bags/show"
     end
