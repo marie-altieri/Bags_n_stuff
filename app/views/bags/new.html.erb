@@ -1,9 +1,14 @@
-<%= simple_forme_for @bag do |f|%>
-<%= f.input :brand%>
-<%= f.input :color%>
-<%= f.input :category%>
-
-<%= f.input :photo, as: :file %>
-
+<h1>Add a new bag</h1>
+<%= simple_form_for(@bag) do |f| %>
+  <%= f.input :brand,
+              placeholder:"Brand",
+              label: false %>
+  <%= f.input :category,
+              placeholder:"Category",
+              label: false %>
+  <%= f.input :color,
+              placeholder:"Price",
+              label: false %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit %>
 <% end %>
-  <h1>Add a new bag</h1>
