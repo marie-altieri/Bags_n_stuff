@@ -2,6 +2,12 @@ class BagsController < ApplicationController
 
   def index
     @bags = Bag.all
+    if params[:query].present?
+      sql_query = "brand ILIKE :query OR category ILIKE :query"
+      @bags = Bag.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @bags = Bag.all
+    end
   end
 
   def show

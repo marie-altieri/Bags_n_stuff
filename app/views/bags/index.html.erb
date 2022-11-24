@@ -1,6 +1,15 @@
 <div class="container" >
   <div class="top-container">
-    <p class="rounded-btn">Search...</p>
+
+<%= form_with url: bags_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a bag"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
   </div>
   <div class="main-container">
     <div class="row d-flex justify-content-between" >
@@ -20,16 +29,4 @@
   </div>
 </div>
 
-<%# logo
-image user
-search barre
-critères search
- button
- button
- button
- button
- image
-  name
-    description
-    price x4
-%>
+
