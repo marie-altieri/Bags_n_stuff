@@ -1,3 +1,6 @@
+body{
+  font-family: mukta;
+}
 .container-bottom{
   display: flex;
   flex-direction: column;
@@ -8,6 +11,7 @@
 }
 .description-produit{
   text-align: left;
+
 
 }
 
@@ -29,4 +33,25 @@
 .button-createbooking:hover{
   background-color: #EAD7D6;
   color: white;
+}
+.container-top-img{
+  margin-bottom: 12px;
+}
+
+#new_booking {
+  input {
+    border-radius: 20px
+  }
+}
+#test{
+  background-color:#B89498;
+  margin-top: 15px;
+  color: white;
+}
+
+#test:hover{
+  transition: 0,5s;
+  border-color: #B89498;
+  background-color: #EAD7D6;
+  color: black;
 }

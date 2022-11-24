@@ -1,0 +1,40 @@
+h1{
+  font-family: "IBM Plex Sans";
+}
+
+#bag_brand{
+  border-radius: 15px;
+  border: 1px solid #B89498;
+
+}
+
+#bag_category{
+  border-radius: 15px;
+  border: 1px solid #B89498;
+}
+
+#bag_color{
+  border-radius: 15px;
+  border: 1px solid #B89498;
+}
+#bag_photo{
+  border-radius: 15px;
+  border: 1px solid #B89498;
+}
+body{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#test2{
+  border-radius: 10px;
+  border: none;
+  background-color: #B89498;
+  color: white;
+}
+
+#test2:hover{
+  background-color: #EAD7D6;
+  color: black;
+  border: solid 1px #B89498;
+}
