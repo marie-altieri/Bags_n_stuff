@@ -20,9 +20,13 @@ class BagsController < ApplicationController
   end
 
   def create
-    bag = Bag.new(bag_params)
-    bag.save
-    redirect_to bags_path
+    @bag = Bag.new(bag_params)
+    @bag.user = current_user
+    if @bag.save
+      redirect_to bags_path
+    else
+      render "bags/new"
+    end
   end
 
   private
