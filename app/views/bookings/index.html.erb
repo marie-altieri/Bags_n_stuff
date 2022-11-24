@@ -1,18 +1,15 @@
 <div class="mbook">
-    <h2>My bookings</h2>
-  <% @bookings.each do |booking| %>
-    <ul  class="selection">
-      <li>
-        <input type="checkbox" id="Delete bag" name="Delete bag">
-        <label for="Delete bag"><p>You booked the <strong><%= booking.bag.brand %></strong> bag from the <strong><%= booking.start_date %></strong> to the <strong><%= booking.end_date %></strong><p>
-      </li>
-    </ul>
-  <% end %>
+  <h2>My bookings</h2>
+
+  <%= simple_form_for :bookings, url: "/bookings/bulk_destroy", method: :delete do |f| %>
+  <ul>
+    <% @bookings.each do |booking| %>
+      <li><input type="checkbox" name="collection_ids[]" value="<%= booking.id %>"/> <p>You booked the <strong><%= booking.bag.brand %></strong> bag from the <strong><%= booking.start_date %></strong> to the <strong><%= booking.end_date %></strong><p></li>
+    <% end %>
+  </ul>
+  <%= f.submit "Cancel my booking(s)" %>
 
   <div class="total">
     <strong><p> Your total is: €€€<p></strong>
   </div>
-
-<div class="delete">
-  <%= link_to "Delete your selection", bookings_path %>
-</div>
+<% end %>

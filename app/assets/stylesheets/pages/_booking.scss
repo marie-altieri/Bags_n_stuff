@@ -3,7 +3,13 @@ ul {
 }
 
 li {
-  display: inline;
+  display: flex;
+  align-content: center;
+}
+
+p {
+  padding-top: 15px;
+  padding-left: 15px;
 }
 
 .mbook {
