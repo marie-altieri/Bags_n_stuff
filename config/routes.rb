@@ -11,5 +11,9 @@ Rails.application.routes.draw do
   end
 
   resources :reviews, only: [:destroy]
-  resources :bookings, only: [:destroy, :index]
+  resources :bookings, only: [:destroy, :index] do
+    collection do
+      delete :bulk_destroy
+    end
+  end
 end

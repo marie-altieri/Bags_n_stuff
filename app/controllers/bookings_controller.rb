@@ -21,6 +21,11 @@ class BookingsController < ApplicationController
     end
   end
 
+  def bulk_destroy
+    Booking.where(id: params[:collection_ids]).destroy_all
+    redirect_to bookings_path
+  end
+
   private
 
   def booking_params
