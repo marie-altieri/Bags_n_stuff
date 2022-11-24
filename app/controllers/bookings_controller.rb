@@ -8,15 +8,22 @@ class BookingsController < ApplicationController
   end
 
   def create
+    redirect_to new_user_session_path and return unless current_user
+
     @booking = Booking.new(booking_params)
     @bag = Bag.find(params[:bag_id])
     @booking.user = current_user
     @booking.bag = @bag
     if @booking.save
-      redirect_to bag_bookings_path(@bag)
+      redirect_to bookings_path
     else
       render "bags/show"
     end
+  end
+
+  def bulk_destroy
+    Booking.where(id: params[:collection_ids]).destroy_all
+    redirect_to bookings_path
   end
 
   private

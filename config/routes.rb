@@ -7,9 +7,13 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :bags do
     resources :reviews, except: [:destroy]
-    resources :bookings, except: [:destroy]
+    resources :bookings, except: [:destroy, :index]
   end
 
   resources :reviews, only: [:destroy]
-  resources :bookings, only: [:destroy]
+  resources :bookings, only: [:destroy, :index] do
+    collection do
+      delete :bulk_destroy
+    end
+  end
 end
