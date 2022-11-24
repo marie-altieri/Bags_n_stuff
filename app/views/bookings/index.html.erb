@@ -1,20 +1,17 @@
 <div class="mbook">
-  <h2>My bookings</h2>
-</div>
-<% @bookings.each do |booking| %>
-<div class="booking">
-  <ul>
-    <li>
-      <input type="checkbox" id="Delete bag" name="Delete bag">
-      <label for="Delete bag"><p>You booked the <strong><%= booking.bag.brand %></strong> bag from the <strong><%= booking.start_date %></strong> to the <strong><%= booking.end_date %></strong><p>
-    </li>
-  </ul>
-</div>
-<% end %>
+    <h2>My bookings</h2>
+  <% @bookings.each do |booking| %>
+    <ul  class="selection">
+      <li>
+        <input type="checkbox" id="Delete bag" name="Delete bag">
+        <label for="Delete bag"><p>You booked the <strong><%= booking.bag.brand %></strong> bag from the <strong><%= booking.start_date %></strong> to the <strong><%= booking.end_date %></strong><p>
+      </li>
+    </ul>
+  <% end %>
 
-<div class="total">
-  <strong><p> Your total is: €€€<p></strong>
-</div>
+  <div class="total">
+    <strong><p> Your total is: €€€<p></strong>
+  </div>
 
 <div class="delete">
   <%= link_to "Delete your selection", bookings_path %>
