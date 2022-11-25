@@ -56,3 +56,38 @@ p {
   align-content: center;
   align-items: center;
 }
+
+.price-options {
+  margin-left: 30px;
+}
+
+#option {
+  margin-bottom: 5px;
+}
+
+.extra {
+  margin-left: 20px;
+}
+
+#total {
+  margin-top: 10px;
+  color: #977579;
+  border: 1px solid #B89498;
+  width: 200px;
+  border-radius: 10px;
+  padding-left: 10px;
+  text-align: center;
+}
+
+#cancel-button {
+  border-radius: 30px;
+  border: 1px solid #B89498;
+  background-color: #B89498;
+  color: white;
+  margin-left: 60px;
+}
+
+#cancel-button:hover {
+  background-color: #EAD7D6;
+  color: black;
+}
