@@ -5,34 +5,36 @@ category
 color
 brand %>
 <div class="container">
-  <div class="container-top-img">
-    <%= cl_image_tag @bag.photo.key, height: 200, width: 200, crop: :fill %>
+  <div class="image-date">
+    <div class="container-top-image">
+      <%= cl_image_tag @bag.photo.key %>
+    </div>
+
+    <div class="selection-date">
+      <h3>Dates</h3>
+      <%= simple_form_for [@bag, @booking] do |f| %>
+        <%= f.input :start_date, as: :date, html5: true, label: "Start:"%>
+        <%= f.input :end_date, as: :date, html5: true, label: "End:"%>
+        <%= f.check_box :cancellation_guarantee, as: :boolean %>
+
+        <label for="cancellation-gurantee">Cancellation guarantee: +3€</label>
+        <br>
+        <%= f.check_box :damage_guarantee, label: "on sen fout" %>
+        <label for="damage-guarantee">Damage guarantee: +35€</label>
+        <br>
+        <%= f.check_box :personnalized_shipping %>
+        <label for="personnalized-delivery">Personnalized delivery: +9€</label>
+        <br>
+
+                <%= f.button :submit, "Create Booking", id: "test" %>
+
+    </div>
   </div>
-
-  <div class="container-bottom">
-    <h3>Dates</h3>
-    <%= simple_form_for [@bag, @booking] do |f| %>
-      <%= f.input :start_date, as: :date, html5: true, label: "Start:"%>
-      <%= f.input :end_date, as: :date, html5: true, label: "End:"%>
-      <%= f.check_box :cancellation_guarantee, as: :boolean %>
-
-      <label for="cancellation-gurantee">Cancellation guarantee: +3€</label>
+      <% end %>
       <br>
-      <%= f.check_box :damage_guarantee, label: "on sen fout" %>
-      <label for="damage-guarantee">Damage guarantee: +35€</label>
-      <br>
-      <%= f.check_box :personnalized_shipping %>
-      <label for="personnalized-delivery">Personnalized delivery: +9€</label>
-      <br>
-
-      <%= f.button :submit, "Create Booking", id: "test" %>
-    <% end %>
-    <br>
 
 
     <h3>Description</h3>
     <p>Découvrez toutes les dernières nouveautés de la collection "Le Papier". Profitez de la livraison et des retours offerts. Bobs. Accessoires. Sacs. Robes.
        T-shirts. Mailles. Chaussures.</p>
-
-  </div>
 </div>
