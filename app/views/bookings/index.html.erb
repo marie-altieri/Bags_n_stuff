@@ -5,11 +5,10 @@
   <ul>
     <% @bookings.each do |booking| %>
       <li><input type="checkbox" name="collection_ids[]" value="<%= booking.id %>"/> <p>You booked the <strong><%= booking.bag.brand %></strong> bag from the <strong><%= booking.start_date %></strong> to the <strong><%= booking.end_date %></strong><p></li>
+      <li><strong> Price per day: <%= booking.bag.price %>€</strong></li>
+      <li><strong> Your total for <%= (booking.end_date - booking.start_date).to_i %> days is: <%= booking.bag.price * (booking.end_date - booking.start_date).to_i %> € </strong></li>
     <% end %>
   </ul>
   <%= f.submit "Cancel my booking(s)" %>
 
-  <div class="total">
-    <strong><p> Your total is: €€€<p></strong>
-  </div>
 <% end %>
