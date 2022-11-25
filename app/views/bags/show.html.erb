@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container ">
   <div class="image-date">
     <div class="container-top-image">
       <%= cl_image_tag @bag.photo.key %>
@@ -20,24 +20,23 @@
         <label for="personnalized-delivery">Personnalized delivery: +9€</label>
         <br>
 
-                <%= f.button :submit, "Create Booking", id: "test" %>
+            <%= f.button :submit, "Create Booking", id: "test" %>
 
     </div>
   </div>
       <% end %>
       <br>
 
+    <div class= "description-reviews">
+      <h3 id= "descri">Description</h3>
+      <p>Découvrez toutes les dernières nouveautés de la collection "Le Papier". Profitez de la livraison et des retours offerts. Bobs. Accessoires. Sacs. Robes.
+        T-shirts. Mailles. Chaussures.</p>
 
-    <h3>Description</h3>
-    <p>Découvrez toutes les dernières nouveautés de la collection "Le Papier". Profitez de la livraison et des retours offerts. Bobs. Accessoires. Sacs. Robes.
-       T-shirts. Mailles. Chaussures.</p>
-
-    <h3>Reviews</h3>
-      <% @bag.reviews.each do |review| %>
-          <li><%= review.comment %></li>
-              <li><%= review.rating %></li>
-
-        <% end %>
+      <h3>Reviews</h3>
+        <% @bag.reviews.each do |review| %>
+        <p id= "review-comment"><%= review.comment %></p>
+        <p><%= review.rating %></p>
+      </div>
+          <% end %>
   </div>
 </div>
-
