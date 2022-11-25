@@ -1,25 +1,45 @@
-h1{
+#new_bag{
   font-family: "IBM Plex Sans";
+  text-align: center;
+  padding-bottom: 30px;
 }
 
 #bag_brand{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 15px;
   border: 1px solid #B89498;
+  width: 500px;
 
 }
 
 #bag_category{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 15px;
   border: 1px solid #B89498;
+  width: 500px;
+
 }
 
 #bag_color{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 15px;
   border: 1px solid #B89498;
+  width: 500px;
+
 }
 #bag_photo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 15px;
   border: 1px solid #B89498;
+  width: 500px;
 }
 body{
   padding-left: 20px;
@@ -27,10 +47,15 @@ body{
 }
 
 #test2{
-  border-radius: 10px;
-  border: none;
+  border-radius: 15px;
+  border: 1px solid #B89498;
   background-color: #B89498;
   color: white;
+  width: 500px;
+  line-height: 35px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #test2:hover{

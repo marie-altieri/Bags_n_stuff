@@ -1,14 +1,19 @@
-<h1>Add a new bag</h1>
+<h1 id="new_bag">Add a new bag</h1>
 <%= simple_form_for @bag do |f| %>
   <%= f.input :brand,
               placeholder:"Brand",
               label: false %>
   <%= f.input :category,
-              placeholder:"Category",
-              label: false %>
+              :as => :select,
+              :collection => ['Backpack','Purse', 'Duffle Bag', 'Wallet','Chain Bag', 'Briefcase', 'Saddle Bag', 'Suitcase', 'Bucket Bag', 'Tote Bag'],
+              label: false,
+              prompt: "Category" %>
+
   <%= f.input :price,
               placeholder:"Price",
               label: false %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit "submit", id: "test2" %>
+  <%= f.input :photo,
+              as: :file,
+              label: false %>
+  <%= f.submit "Submit", id: "test2" %>
 <% end %>
