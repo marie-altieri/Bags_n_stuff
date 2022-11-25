@@ -4,7 +4,7 @@
   <%= simple_form_for :bookings, url: "/bookings/bulk_destroy", method: :delete do |f| %>
   <ul>
     <% @bookings.each do |booking| %>
-      <li><input type="checkbox" name="collection_ids[]" value="<%= booking.id %>"/> <p>You booked the <strong><%= booking.bag.brand %></strong> bag from the <strong><%= booking.start_date %></strong> to the <strong><%= booking.end_date %></strong><p></li>
+      <li><input type="checkbox" name="collection_ids[]" value="<%= booking.id %>"/> <p>You booked the <strong><%= booking.bag.brand %></strong> bag from the <strong><%= booking.start_date.strftime("%d/%m/%Y") %></strong> to the <strong><%= booking.end_date.strftime("%d/%m/%Y") %></strong><p></li>
       <li><strong> Price per day: <%= booking.bag.price %>€</strong></li>
       <li><strong> Your total for <%= (booking.end_date - booking.start_date).to_i %> days is: <%= booking.bag.price * (booking.end_date - booking.start_date).to_i %> € </strong></li>
     <% end %>
