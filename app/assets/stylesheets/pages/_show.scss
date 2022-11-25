@@ -15,13 +15,23 @@ body{
 
 }
 .image-date{
-  display: flex;
   align-content: center;
   justify-content: space-evenly;
 
 }
+
+@media screen and (min-width: 900px) {
+  .image-date{
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+
+  }
+}
 .selection-date{
   text-align: start;
+  width: 400px;
+
 }
 
 .ensemble-checkbox{
@@ -56,7 +66,13 @@ body{
   background-color:#B89498;
   margin-top: 15px;
   color: white;
+  margin-top: 30px;
+  align-items:flex-end ;
+
+  justify-content: flex-end;
+
 }
+
 
 #test:hover{
   transition: 0,5s;
@@ -72,4 +88,19 @@ body{
     width: 400px;
     height: 400px;
     }
+}
+
+.description-reviews{
+  text-align:left ;
+  margin-left: 160px;
+
+
+}
+#descri{
+  margin-top: 20px;
+
+}
+
+#review-comment{
+  margin-bottom: 0px;
 }
