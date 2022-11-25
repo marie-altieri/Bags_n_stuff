@@ -5,10 +5,21 @@
   <ul>
     <% @bookings.each do |booking| %>
       <li><input type="checkbox" name="collection_ids[]" value="<%= booking.id %>"/> <p>You booked the <strong><%= booking.bag.brand %></strong> bag from the <strong><%= booking.start_date.strftime("%d/%m/%Y") %></strong> to the <strong><%= booking.end_date.strftime("%d/%m/%Y") %></strong><p></li>
-      <li><strong> Price per day: <%= booking.bag.price %>€</strong></li>
-      <li><strong> Your total for <%= (booking.end_date - booking.start_date).to_i %> days is: <%= booking.bag.price * (booking.end_date - booking.start_date).to_i %> € </strong></li>
+      <div class="price-options">
+        <li><strong> Price per day: <%= booking.bag.price %>€</strong></li>
+        <% if booking.extra? %>
+          <p id= "option"><strong>My option(s):</strong></p>
+          <div class="extra">
+            <% booking.extras_with_price.each do |key, price| %>
+              <li>• <%= key.to_s.humanize %>: <%= price%>€</li>
+            <% end %>
+          </div>
+        <% end %>
+
+        <li id="total"><strong> Your total for <%= (booking.end_date - booking.start_date).to_i %> days is: <%= booking.full_price %> € </strong></li>
+      </div>
     <% end %>
   </ul>
-  <%= f.submit "Cancel my booking(s)" %>
+  <%= f.submit "Cancel my booking(s)", id:"cancel-button" %>
 
 <% end %>
