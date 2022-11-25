@@ -14,6 +14,15 @@ body{
 
 
 }
+.image-date{
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+
+}
+.selection-date{
+  text-align: start;
+}
 
 .ensemble-checkbox{
   padding-top: 5px;
@@ -54,4 +63,13 @@ body{
   border-color: #B89498;
   background-color: #EAD7D6;
   color: black;
+}
+
+.container-top-image{
+  // margin-left: 20px;
+  align-content: flex-start;
+    img{
+    width: 400px;
+    height: 400px;
+    }
 }
