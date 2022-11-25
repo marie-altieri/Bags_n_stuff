@@ -28,5 +28,12 @@
     <p>Découvrez toutes les dernières nouveautés de la collection "Le Papier". Profitez de la livraison et des retours offerts. Bobs. Accessoires. Sacs. Robes.
        T-shirts. Mailles. Chaussures.</p>
 
+    <h3>Reviews</h3>
+      <% @bag.reviews.each do |review| %>
+          <li><%= review.comment %></li>
+              <li><%= review.rating %></li>
+
+        <% end %>
   </div>
 </div>
+

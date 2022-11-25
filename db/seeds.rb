@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require "open-uri"
 
+Review.destroy_all
 Booking.destroy_all
 Bag.destroy_all
 User.destroy_all
@@ -18,18 +19,30 @@ bag = Bag.new(brand: "jacquemus", category: "small", price: "30")
 bag.user = user
 bag.photo.attach(io: file, filename: "bag.jpg", content_type: "image/jpg")
 bag.save
+review = Review.new(comment: "Amazing bag, really good quality, all my friends were jealous, you should all rent bags here the service is A-M-A-Z-I-N-G !!", rating: 5)
+review.bag = bag
+review.user = user
+review.save
 
 file = URI.open("https://assets.hermes.com/is/image/hermesedito/P_11_inspiration_BIRKIN%203%20EN%201")
 bag = Bag.new(brand: "Hermes", category: "medium", price: "160")
 bag.user = user
 bag.photo.attach(io: file, filename: "bag.jpg", content_type: "image/jpg")
 bag.save
+review = Review.new(comment: "Not good, the bag was dirty", rating: 2)
+review.bag = bag
+review.user = user
+review.save
 
 file = URI.open("https://twicpics.celine.com/product-prd/images/large/189243DRU.38NO_1_SPR19_130266.jpg")
 bag = Bag.new(brand: "Céline", category: "Cross-Body", price: "30")
 bag.user = user
 bag.photo.attach(io: file, filename: "bag.jpg", content_type: "image/jpg")
 bag.save
+review = Review.new(comment: "good", rating: 4)
+review.bag = bag
+review.user = user
+review.save
 
 file = URI.open("https://cdn.sarenza.cloud/_img/productsv4/0000269185/0000269185_492536_09_504x690.jpg?202101291745&v=20180830155342")
 bag = Bag.new(brand: "Vanessa Bruno", category: "Cabas", price: "330")
