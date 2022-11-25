@@ -22,7 +22,7 @@
           <div class="content">
               <p class="h3"><%= bag.brand.split(" ").map{|w| w.capitalize }.join(" ") %></p>
               <p class="h4"><%= bag.category.capitalize %></p>
-              <p class="h3"><%= bag.color.capitalize %></p>
+              <p class="h4"><%= bag.price %>€</p>
           </div>
         </div>
       <% end %>
