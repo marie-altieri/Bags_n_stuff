@@ -1,9 +1,3 @@
-<%# image
-titre: date (submit forme
-date picker)
-category
-color
-brand %>
 <div class="container">
   <div class="container-top-img">
     <%= cl_image_tag @bag.photo.key, height: 200, width: 200, crop: :fill %>
@@ -34,5 +28,12 @@ brand %>
     <p>Découvrez toutes les dernières nouveautés de la collection "Le Papier". Profitez de la livraison et des retours offerts. Bobs. Accessoires. Sacs. Robes.
        T-shirts. Mailles. Chaussures.</p>
 
+    <h3>Reviews</h3>
+      <% @bag.reviews.each do |review| %>
+          <li><%= review.comment %></li>
+              <li><%= review.rating %></li>
+
+        <% end %>
   </div>
 </div>
+
